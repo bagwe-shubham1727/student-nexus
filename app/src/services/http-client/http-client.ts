@@ -4,6 +4,9 @@ import axios, {
     AxiosResponse,
     AxiosError,
   } from "axios";
+
+import dotenv from "dotenv";
+dotenv.config();
   
   export default class HttpClient {
     private static instance: AxiosInstance;
@@ -11,7 +14,7 @@ import axios, {
     private static initInstance(): void {
       if (!HttpClient.instance) {
         const config: AxiosRequestConfig = {
-          baseURL: process.env.API_BASEURL || "http://localhost:3001",
+          baseURL: process.env.API_BASEURL,
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
