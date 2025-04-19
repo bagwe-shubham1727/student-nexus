@@ -14,7 +14,7 @@ dotenv.config();
     private static initInstance(): void {
       if (!HttpClient.instance) {
         const config: AxiosRequestConfig = {
-          baseURL: process.env.API_BASEURL,
+          baseURL: process.env.REACT_APP_API_BASEURL,
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
