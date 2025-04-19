@@ -4,9 +4,6 @@ import axios, {
     AxiosResponse,
     AxiosError,
   } from "axios";
-
-import dotenv from "dotenv";
-dotenv.config();
   
   export default class HttpClient {
     private static instance: AxiosInstance;
