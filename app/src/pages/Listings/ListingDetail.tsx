@@ -65,7 +65,7 @@ const ListingPage: React.FC<ListingDetailProps> = ({ listings }) => {
         const headers = {
             "Content-Type": "application/json"
         };
-        const apiURL = process.env.REACT_APP_API_BASEURL || "http://localhost:3001";
+        const apiURL = process.env.REACT_APP_API_BASEURL;
         const response = await fetch(`${apiURL}/checkout`, {
             method: "POST",
             headers: headers,
