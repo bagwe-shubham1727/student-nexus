@@ -65,7 +65,7 @@ const ListingPage: React.FC<ListingDetailProps> = ({ listings }) => {
         const headers = {
             "Content-Type": "application/json"
         };
-        const apiURL = process.env.API_BASEURL || "http://localhost:3001";
+        const apiURL = process.env.REACT_APP_API_BASEURL || "http://localhost:3001";
         const response = await fetch(`${apiURL}/checkout`, {
             method: "POST",
             headers: headers,
@@ -109,8 +109,8 @@ const ListingPage: React.FC<ListingDetailProps> = ({ listings }) => {
                                 alt={listing.address}
                             />
                         </Card>
-                       
-                        <Card sx={{mt: 2}}>
+
+                        <Card sx={{ mt: 2 }}>
                             <Box
                                 mt={2}
                                 display="flex"
@@ -119,7 +119,7 @@ const ListingPage: React.FC<ListingDetailProps> = ({ listings }) => {
                                 alignContent="start"
                                 padding={2}
                             >
-                                <Preferences/>
+                                <Preferences />
                             </Box>
                         </Card>
                     </Grid>
@@ -155,17 +155,17 @@ const ListingPage: React.FC<ListingDetailProps> = ({ listings }) => {
 
                             </Card>
                         </Card>
-                        
+
                     </Grid>
                 </Grid>
 
                 {/* Additional Details (Overview, Data, Location, Spots, Preferences) */}
-                
 
-                
+
+
 
                 {/* Amenities Section */}
-            
+
             </Paper>
             <AppFooter />
         </Container>
